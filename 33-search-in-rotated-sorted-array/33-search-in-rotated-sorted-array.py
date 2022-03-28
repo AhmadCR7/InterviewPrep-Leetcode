@@ -7,12 +7,13 @@ class Solution:
             if target == nums[mid]:
                 return mid 
             
-            #check if you are in left sorted portion 
+            #check left sorted portion 
             if nums[l] <= nums[mid]:
                 if target > nums[mid] or target < nums[l]:
                     l = mid+1
                 else:
                     r = mid-1
+            #check right sorted portion
             else:
                 if target < nums[mid] or target > nums[r]:
                     r = mid-1
