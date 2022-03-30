@@ -28,7 +28,7 @@ class Solution:
 # right = head
 # n = 2
 # keep shifting until the right is at null and left will be at the node we want to delete 
-# time complxity is O(n)
+# time compleity O(n)
 
 
 
