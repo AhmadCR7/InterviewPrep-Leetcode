@@ -10,7 +10,6 @@ class Solution:
         def helper(l, r):
             if l>r:
                 return None
-            
             mid = (l+r)//2
             root = TreeNode(nums[mid])
             root.left = helper(l, mid-1)
