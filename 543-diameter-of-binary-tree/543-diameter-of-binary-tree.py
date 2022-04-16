@@ -21,5 +21,5 @@ class Solution:
             return max(leftPath, rightPath) + 1
         longestPath(root)
         return diameter 
-    
+        
         
