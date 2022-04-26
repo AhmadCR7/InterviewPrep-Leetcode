@@ -5,7 +5,7 @@ class Solution:
         
         for n in nums:
             #check if its the start of the sequence 
-            if (n -1) not in numSet:
+            if (n - 1) not in numSet:
                 length = 0
                 while (n + length) in numSet:
                     length += 1
