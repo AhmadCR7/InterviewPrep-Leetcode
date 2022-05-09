@@ -4,6 +4,9 @@ class Solution:
             return nums
         # # 1. build hash map : character and how often it appears
         count = Counter(nums)
+        # # 2-3. build heap of top k frequent elements and
+        # convert it into an output array
+        # O(N log k) time
         
         return heapq.nlargest(k, count.keys(), key = count.get)
         
@@ -17,7 +20,7 @@ class Solution:
 # 3 -> 2
 # 4 -> 1
 # 5 -> 4
-# build heap of k most frequent elements 
+# build min heap of k most frequent elements 
 # 1 2 5
 # build an output array 
 # [2,5,1]
