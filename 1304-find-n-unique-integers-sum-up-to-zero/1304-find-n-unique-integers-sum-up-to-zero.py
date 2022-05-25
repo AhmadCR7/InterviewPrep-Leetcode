@@ -8,3 +8,9 @@ class Solution:
             res.append(i)
             res.append(-i)
         return res
+    
+# T: O(n/2) => O(n)
+# S: O(n)
+ 
+        
+         
