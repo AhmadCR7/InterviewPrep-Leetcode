@@ -1,25 +1,27 @@
+
 class Solution:
     def calculate(self, s: str) -> int:
-        res = 0 
+        res = 0
         sign = 1
-        num = 0 
+        num = 0
         stack = []
-        
-        for char in s:
-            if char.isdigit():
-                num = 10 * num + int(char)
-            elif char in "+-":
+
+        for c in s:
+            if c.isdigit():
+                num = 10 * num + int(c)     # get the full number
+            elif c in "-+":
                 res += sign * num
-                num = 0
-                sign = 1 if char == "+" else -1
-            elif char == "(":
-                stack.append(res)
-                stack.append(sign)
-                sign, res = 1, 0
-            elif char == ")":
-                res += sign * num 
-                res *= stack.pop()
-                res += stack.pop()
-                num = 0
-        return res + num * sign 
+                num = 0                     # reset to zero after calculation
+                sign = 1 if c == '+' else -1
+            elif c == '(':                  # prep for calculation
+                stack.append(res)           # cache previous calculation in a stack
+                stack.append(sign)          # cache the sign in a stack
+                sign, res = 1, 0            # reset sign and res
+            elif c == ')':
+                res += sign * num
+                res *= stack.pop()          # calulate the sign before parentheses
+                res += stack.pop()          # A sign (B)
+                num = 0                     # reset to zero after calculation
+
+        return res + num * sign
         
