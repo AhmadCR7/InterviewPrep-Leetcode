@@ -6,8 +6,9 @@ class Solution:
             if currSum < 0:
                 currSum = 0
             currSum += i
-            maxSub = max(maxSub, currSum)
-        return maxSub 
+            maxSub = max(currSum, maxSub)
+        return maxSub
+        
 
     '''
     
