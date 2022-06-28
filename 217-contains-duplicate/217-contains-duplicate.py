@@ -6,8 +6,7 @@ class Solution:
                 return True 
             else:
                 seen.add(number)
-        return False 
-        
+        return False  
        
         
         
@@ -15,7 +14,7 @@ class Solution:
         
         
         
-        
+
         
         
         
