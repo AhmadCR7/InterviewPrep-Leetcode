@@ -5,6 +5,13 @@ class Solution:
         for i in nums:
             if currSum < 0:
                 currSum = 0
-            currSum += i 
+            currSum += i
             maxSub = max(maxSub, currSum)
         return maxSub 
+
+    '''
+    
+nums = [-2,1,-3,4,-1,2,1,-5,4]
+         -1, -3 we dont use them 
+                3,2,1 = 6 answer 
+    '''
