@@ -8,23 +8,29 @@ class Solution:
         if not head or not head.next or not head.next.next:
             return head
         oddptr = curr = head
-        evenptr = evenhead = head.next
+        evenptr = overhead = head.next
         i = 1
+        
         while curr:
             if i > 2 and i % 2 != 0:
                 oddptr.next = curr
-                oddptr = oddptr.next
+                oddptr = oddptr.next 
             elif i > 2 and i % 2 == 0:
                 evenptr.next = curr
-                evenptr = evenptr.next
-            curr = curr.next
+                evenptr = evenptr.next 
+            curr = curr.next 
             i += 1
-        evenptr.next = None
-        oddptr.next = evenhead
-        
-        return head
-                
-                
+        evenptr.next = None 
+        oddptr.next = overhead
+        return head 
+'''
+1. first we check if there is head 
+2. check if there is one node 
+3. check if there is odd node
+4. we set up and index numbder to see if we are in even or odd number 
+5. we don't care about first and second since we already point the pointers at them 
+6. 
+'''
                 
             
         
