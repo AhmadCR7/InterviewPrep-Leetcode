@@ -7,14 +7,7 @@ class Solution:
         return False 
         
         
-        
-'''
-a = sorted(nums)
-        b = sorted(nums,reverse=True)
-        if nums == a or nums == b:
-            return True
-        return False
-'''
+
         
         
         
