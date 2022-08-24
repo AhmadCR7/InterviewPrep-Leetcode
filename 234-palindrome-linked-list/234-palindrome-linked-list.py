@@ -8,10 +8,13 @@ class Solution:
         slow = head
         stack = []
         isPlain = True
-        
+        # Push all elements of the list
+        # to the stack
         while slow != None:
             stack.append(slow.val)
+            # move the head
             slow = slow.next
+            
         while head != None:
             i = stack.pop()
             
