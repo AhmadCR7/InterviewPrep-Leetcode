@@ -6,7 +6,6 @@
 #         self.right = right
 class Solution:
     def findFrequentTreeSum(self, root: Optional[TreeNode]) -> List[int]:
-        
         counter = defaultdict(int)
         def dfs(root):
             if not root: return 0
