@@ -3,7 +3,7 @@ class Solution:
         strLength = len(s)
         cnt = 0 
         
-        while 0 <= i and j < strLength and s[i] == s[j]:
+        while i >= 0 and j < strLength and s[i] == s[j]:
             i -= 1 
             j += 1
             cnt += 1
