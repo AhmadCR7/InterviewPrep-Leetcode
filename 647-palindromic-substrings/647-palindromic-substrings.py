@@ -3,7 +3,7 @@ class Solution:
         strLength = len(s)
         cnt = 0 
         
-        while i >= 0 and j < strLength and s[i] == s[j]:
+        while i >= 0 and strLength > j and s[i] == s[j]:
             i -= 1 
             j += 1
             cnt += 1
@@ -13,8 +13,6 @@ class Solution:
         return sum(self.expandAndCountPali(i,i,s) + self.expandAndCountPali(i,i+1,s) for i in range(len(s)))
          
     
-        
-        
 '''Counts the number of pallindrome substrings from a given center i,j        
         1. when i=j, it's an odd-lengthed pallindrome string. 
             eg: for string "aba", i=j=1.
@@ -27,20 +25,9 @@ class Solution:
         
         Returns:
             cnt - The number of pallindrome substrings from the given center i,j       
-        
-        
-        length=len(s)
-        cnt=0
-        
-        while 0<=i and j<length and s[i]==s[j]:
-            i-=1
-            j+=1
-            cnt+=1
-        
-        return cnt
-        
-    def countSubstrings(self, s: str) -> int:
-        
-        return sum(self.expandAndCountPallindromes(i,i,s) + self.expandAndCountPallindromes(i,i+1,s) for i in range(len(s)))
+
+**Time - O(len(s)^2)
+Space - O(1)
+**
         
 '''
